@@ -29,16 +29,21 @@ public class JobForm {
      */
 
     @NotNull
-    private Employer employer;
+    private int locationId;
+
+
+
+    //@NotNull
+    //private Location location;
 
     @NotNull
-    private Location location;
+    private int coreCompetencyId;
+
+    //@NotNull
+    //private PositionType positionType;
 
     @NotNull
-    private CoreCompetency coreCompetency;
-
-    @NotNull
-    private PositionType positionType;
+    private int positionTypeId;
 
 
     private ArrayList<Employer> employers;
@@ -109,8 +114,33 @@ public class JobForm {
         this.positionTypes = positionTypes;
     }
 
+    public int getLocationId() {
+        return locationId;
+    }
 
-    public Employer getEmployer() {
+    public void setLocationId(int locationId) {
+        this.locationId = locationId;
+    }
+
+    public int getCoreCompetencyId() {
+        return coreCompetencyId;
+    }
+
+    public void setCoreCompetencyId(int coreCompetencyId) {
+        this.coreCompetencyId = coreCompetencyId;
+    }
+
+    public int getPositionTypeId() {
+        return positionTypeId;
+    }
+
+    public void setPositionTypeId(int positionTypeId) {
+        this.positionTypeId = positionTypeId;
+    }
+
+
+
+    /*public Employer getEmployer() {
         return employer;
     }
 
@@ -140,5 +170,5 @@ public class JobForm {
 
     public void setPositionType(PositionType positionType) {
         this.positionType = positionType;
-    }
+    }*/
 }
