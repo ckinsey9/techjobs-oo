@@ -65,7 +65,8 @@ public class JobData {
 
         for (Job job : jobs) {
 
-            if (job.getName().toLowerCase().contains(value)) {
+            //Added the or statement and second condition to check both capitalization cases
+            if (job.getName().toLowerCase().contains(value) || (job.getName().contains(value))) {
                 matchingJobs.add(job);
                 continue;
             }
